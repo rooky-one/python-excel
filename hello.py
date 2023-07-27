@@ -37,7 +37,9 @@ print('')
 for spreadsheet_cells in column_b:
     print(spreadsheet_cells.value)  # Print tuple contents as list
 
-print('')  # Add blank line
+print('')
+print('Lesson 9')  # Add blank line
+print('')
 
 # Lesson 9
 
@@ -69,6 +71,8 @@ for cells_in_range in cell_range:  # Set range
         print(x.value)  # .value pulls out cell data
 
 print('')
+print('Lesson 10')
+print('')
 
 # Lesson 10 Iterate through rows of a spreadsheet
 for row in ws.iter_rows(min_row=2, max_row=7, min_col=1, max_col=2, values_only=True):  # 2 starts from row 2, ends row 7
@@ -82,6 +86,24 @@ for row in ws.iter_rows(min_row=2, max_row=7, min_col=1, max_col=2, values_only=
     #  value_only save us having to use the .value argument
     #print(row)
     for cell in row:
+        print(cell)
+
+print('')
+print('Lesson 11')
+print('')
+
+# Lesson 11 Iterate through columns of a spreadsheet
+# Give same results as iterate by row, just a different way
+for cols in ws.iter_cols(min_row=2, max_row=7, min_col=1, max_col=2, values_only=True):  # 2 starts from row 2, ends row 7
+    #  value_only save us having to use the .value argument
+    print(cols)
+
+print('')
+
+for cols in ws.iter_cols(min_row=2, max_row=7, min_col=1, max_col=2, values_only=True):  # 2 starts from row 2, ends row 7
+    #  value_only save us having to use the .value argument
+    #print(cols)
+    for cell in cols:
         print(cell)
 
 print(f'\n{"<End of hello.py>"}')  # Add newline to start line
