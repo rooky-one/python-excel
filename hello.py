@@ -68,4 +68,20 @@ for cells_in_range in cell_range:  # Set range
     for x in cells_in_range:  # Loop through entire range
         print(x.value)  # .value pulls out cell data
 
+print('')
+
+# Lesson 10 Iterate through rows of a spreadsheet
+for row in ws.iter_rows(min_row=2, max_row=7, min_col=1, max_col=2, values_only=True):  # 2 starts from row 2, ends row 7
+    #  value_only save us having to use the .value argument
+    print(row)
+
+print('')
+
+
+for row in ws.iter_rows(min_row=2, max_row=7, min_col=1, max_col=2, values_only=True):  # 2 starts from row 2, ends row 7
+    #  value_only save us having to use the .value argument
+    #print(row)
+    for cell in row:
+        print(cell)
+
 print(f'\n{"<End of hello.py>"}')  # Add newline to start line
