@@ -1,12 +1,12 @@
 from openpyxl.workbook import Workbook
 from openpyxl import load_workbook
 
-print(f"<Start of hello.py>\n")
+print(f"<Start of tutorial_01.py>\n")
 # Create workbook object
 # wb = Workbook()
 
 # load existing spreadsheet
-wb = load_workbook('hello.xlsx')
+wb = load_workbook('tutorial_01.xlsx')
 
 # Create an active worksheet
 ws = wb.active
@@ -106,4 +106,4 @@ for cols in ws.iter_cols(min_row=2, max_row=7, min_col=1, max_col=2, values_only
     for cell in cols:
         print(cell)
 
-print(f'\n{"<End of hello.py>"}')  # Add newline to start line
+print(f'\n{"<End of tutorial_01.py>"}')  # Add newline to start line
