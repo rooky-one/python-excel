@@ -45,10 +45,11 @@ print("")
 print(f"Lesson 14 - Loop Through a Spreadsheet and Add Names\n")
 
 # Create Python List of Names
-names = ["Jan","Feb","Mar"]
+names = ["Jan", "Feb", "Mar"]
 
 # Change many rows
 starting_row = 13
+
 for name in names:
     ws.cell(starting_row, column=1).value = name  # Loop through names
     starting_row += 1  # increment counter
@@ -57,6 +58,5 @@ wb.save('tutorial_02.xlsx')
 
 print("")
 print("File was saved...")
-print("")
 
 print(f'\n{"<End of tutorial_02.py>"}')  # Add newline to start line
