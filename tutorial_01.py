@@ -1,5 +1,6 @@
 from openpyxl.workbook import Workbook
 from openpyxl import load_workbook
+#  openpyxl ia a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files
 
 print(f"<Start of tutorial_01.py>\n")
 # Create workbook object
@@ -84,7 +85,7 @@ print('')
 
 for row in ws.iter_rows(min_row=2, max_row=7, min_col=1, max_col=2, values_only=True):  # 2 starts from row 2, ends row 7
     #  value_only save us having to use the .value argument
-    #print(row)
+    #  print(row)
     for cell in row:
         print(cell)
 
