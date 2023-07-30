@@ -58,10 +58,20 @@ for position in positions:  # Loop through colours to be added to column 3
     starting_row += 1  # increment and step into next name
 
 # Create formula
-ws['C9'] = "=AVERAGE(C2:C8)"
+ws['C9'] = "=AVERAGE(C2:C8)" #  Adds the average of range to this cell
 
 # Save Spreadsheet
-wb.save('tutorial_03.xlsx')
+# wb.save('tutorial_03.xlsx')
+
+# Updated save method to allow to close excel and save update
+while True:
+    try:
+        wb.save('tutorial_03.xlsx')
+    except PermissionError:
+        input("Please close 'Excel' and press Enter")
+    else:
+        print("File saved...")
+        break
 
 print('File Saved to tutorial_03.xlsx...')
 
