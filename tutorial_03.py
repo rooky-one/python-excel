@@ -61,7 +61,7 @@ for position in positions:  # Loop through colours to be added to column 3
 ws['C9'] = "=AVERAGE(C2:C8)" #  Adds the average of range to this cell
 
 # Save Spreadsheet
-# wb.save('tutorial_03.xlsx')
+# wb.save('tutorial_03.xlsx')  See new method below
 
 # Updated save method to allow to close excel and save update
 while True:
@@ -72,6 +72,23 @@ while True:
     else:
         print("File saved...")
         break
+
+# Lesson 18 - Change Cell Font, Size, Color, Boldness, Italics
+print(f"Lesson 18 - Change Cell Font, Size, Color, Boldness, Italics\n")
+
+cell = ws['A1']  # Select cell
+
+# Make changes to juct this cell
+cell.font = Font(
+    size=20,
+    bold=True,
+    italic=False,
+    color="aa0011"
+
+)
+
+# Save Spreadsheet (quick save)
+wb.save('tutorial_03.xlsx')
 
 print('File Saved to tutorial_03.xlsx...')
 
