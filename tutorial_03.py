@@ -1,6 +1,6 @@
 from openpyxl.workbook import Workbook
 # from openpyxl import load_workbook
-from openpyxl.styles import Font
+from openpyxl.styles import Font, Border, Side
 
 #  openpyxl ia a Python library to read/write Excel 2010 xlsx/xlsm/xltx/xltm files
 
@@ -76,9 +76,11 @@ while True:
 # Lesson 18 - Change Cell Font, Size, Color, Boldness, Italics
 print(f"Lesson 18 - Change Cell Font, Size, Color, Boldness, Italics\n")
 
+# We need to import font in opening statements
+
 cell = ws['A1']  # Select cell
 
-# Make changes to juct this cell
+# Make changes to just this cell
 cell.font = Font(
     size=20,
     bold=True,
@@ -86,6 +88,24 @@ cell.font = Font(
     color="aa0011"
 
 )
+
+# Lesson 19 - Add Borders To Cells in a Spreadsheet
+print(f"Lesson 19 - Add Borders To Cells in a Spreadsheet\n")
+
+# We need to import border and side in opening statements
+
+# Define a border
+
+my_border = Side(style="thick", color="000000")  # Set style
+C9 = ws['C9']  # Set cell as variable
+
+# Now Set Border
+C9.border = Border(
+    left=my_border,
+    right=my_border,
+    top=my_border,
+    bottom=my_border)
+
 
 # Save Spreadsheet (quick save)
 wb.save('tutorial_03.xlsx')
