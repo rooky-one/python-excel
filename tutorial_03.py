@@ -85,18 +85,17 @@ cell.font = Font(
     size=20,
     bold=True,
     italic=False,
-    color="aa0011"
-
-)
-
-# Lesson 19 - Add Borders To Cells in a Spreadsheet
-print(f"Lesson 19 - Add Borders To Cells in a Spreadsheet\n")
+    color="aa0011")
 
 # We need to import border and side in opening statements
 
 # Define a border
+# Value must be one of
+# 'double', 'dashed', 'mediumDashed', 'thick',
+# 'slantDashDot', 'dotted', 'dashDot', 'hair', 'dashDotDot',
+# 'mediumDashDotDot', 'mediumDashDot', 'thin', 'medium'
 
-my_border = Side(style="thick", color="000000")  # Set style
+my_border = Side(style="double", color="000000")  # Set style
 C9 = ws['C9']  # Set cell as variable
 
 # Now Set Border
